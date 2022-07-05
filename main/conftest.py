@@ -16,7 +16,7 @@ def browser_invocation():
 
     yield driver
 
-    driver.close()
+    driver.quit()
 
 
 @pytest.fixture()
@@ -25,4 +25,4 @@ def url():
 
 @pytest.fixture()
 def filenamemode():
-    return ['data.csv', 'a']
+    return ('data.csv', 'a')
